@@ -9,47 +9,86 @@ body {
   background: #fafafa;
   color: #333;
   overflow: hidden;
+  font-size: 100%;
 }
 
 /* Background Images */
 
 .bg {
-  background-repeat: no-repeat;
+  background-repeat: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  /* background-size: 100% auto;
-  background-position: center center;*/
+}
+
+.bg>:first-child {
+  margin-bottom: 3rem;
 }
 
 .bg-home {
-  background-image: url("/images/home.jpg")
+  background-image: url("/images/home.jpg");
 }
 
 .bg-about {
-  background-image: url("/images/about.jpg")
+  background-image: url("/images/about.jpg");
 }
 
 .bg-reception {
-  background-image: url("/images/reception.jpg")
+  background-image: url("/images/reception.jpg");
 }
 
 .bg-accommodations {
-  background-image: url("/images/accommodations.jpg")
+  background-image: url("/images/accommodations.jpg");
 }
 
 .bg-transportation {
-  background-image: url("/images/transportation.jpg")
+  background-image: url("/images/transportation.jpg");
 }
 
 .bg-dresscode {
-  background-image: url("/images/dresscode.jpg")
+  background-image: url("/images/dresscode.jpg");
 }
 
 .bg-rsvp {
-  background-image: url("/images/rsvp.jpg")
+  background-image: url("/images/rsvp.jpg");
 }
 
 .bg-checklist {
-  background-image: url("/images/checklist.jpg")
+  background-image: url("/images/checklist.jpg");
+}
+
+@media screen and (max-width: 35.5em) {
+
+  .bg-home {
+    background-image: url("/images/home-mobile.jpg");
+  }
+
+  .bg-about {
+    background-image: url("/images/about-mobile.jpg");
+  }
+
+  .bg-reception {
+    background-image: url("/images/reception-mobile.jpg");
+  }
+
+  .bg-accommodations {
+    background-image: url("/images/accommodations-mobile.jpg");
+  }
+
+  .bg-transportation {
+    background-image: url("/images/transportation-mobile.jpg");
+  }
+
+  .bg-dresscode {
+    background-image: url("/images/dresscode-mobile.jpg");
+  }
+  .bg-rsvp {
+    background-image: url("/images/rsvp-mobile.jpg");
+  }
+  .bg-checklist {
+    background-image: url("/images/checklist-mobile.jpg");
+  }
 }
 
 /* Text Styling */
@@ -72,9 +111,23 @@ th, tr {
   text-align: center
 }
 
-.header {
+.title, .header {
   font-size: 4rem;
+}
+
+.title {
+  font-family: "ralewayregular";
+  margin: 0.5rem 0 0 0;
+}
+
+.header {
   font-family: "amperzandregular";
+  margin: 0.5rem 0 0 0;
+}
+
+.sub-header {
+  font-size: 3rem;
+  font-family: "roboto_slabregular";  
 }
 
 .img-container {
@@ -135,21 +188,14 @@ th, tr {
   height: 100%;
 }
 
-.prev, .next {
-  text-align: center;
+.nav {
   position: fixed;
-  font-size: 6rem;
-  color: #fff;
-  top: 30%;
+  bottom: 0;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
-}
-
-.prev {
-  left: 10%;
-}
-
-.next {
-  right: 10%;
+  width: 100%;
+  color: #fff;
 }
 
 #fixed-view-container {
